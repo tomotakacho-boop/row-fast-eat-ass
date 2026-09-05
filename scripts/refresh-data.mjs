@@ -555,9 +555,11 @@ function buildPlayers({ baseRankings, adpRows, dynastyMap, rookieMap, espnMap, e
       const curatedNews = injuryOverrides.get(key);
       const providerStatus = String(espnPlayer?.injuryStatus || "ACTIVE").toUpperCase();
       const providerInjured = Boolean(espnPlayer?.injured) || !["ACTIVE", "NORMAL", ""].includes(providerStatus);
-      const genericPenalty = providerInjured ? providerStatus.includes("OUT") || providerStatus.includes("IR") ? 10 : providerStatus.includes("DOUBT") ? 8 : 3 : 0;
+      const providerReserve = /INJURY_RESERVE|INJURED_RESERVE|RESERVE|PUP|NFI/.test(providerStatus);
+      const providerOut = providerStatus.includes("OUT");
+      const genericPenalty = providerInjured ? providerReserve ? 24 : providerOut ? 10 : providerStatus.includes("DOUBT") ? 8 : 3 : 0;
       const injuryRankPenalty = numeric(curatedNews?.rankPenalty) ?? genericPenalty;
-      const availabilityMultiplier = numeric(curatedNews?.availabilityMultiplier) ?? (providerInjured ? providerStatus.includes("OUT") || providerStatus.includes("IR") ? .90 : providerStatus.includes("DOUBT") ? .94 : .98 : 1);
+      const availabilityMultiplier = numeric(curatedNews?.availabilityMultiplier) ?? (providerInjured ? providerReserve ? .76 : providerOut ? .90 : providerStatus.includes("DOUBT") ? .94 : .98 : 1);
       const fpStats = fpProjection ? fantasyProsProjectionStats(fpProjection) : null;
       const projection = espnProjectionStats(espnProjected.details, sourcePosition) || fpStats;
       const fallbackPoints = fpStats?.providerPoints ?? espnProjected.points;

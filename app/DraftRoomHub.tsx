@@ -102,11 +102,12 @@ export function DraftRoomHub({ players, notes, generatedAt, simulator, research,
     return () => window.removeEventListener("keydown", close);
   }, [intelPanel]);
 
-  useEffect(() => {
+  function showIntelPanel(panel: IntelPanel) {
     setSearch("");
     setPosition("ALL");
     setWatchFilter("ALL");
-  }, [intelPanel]);
+    setIntelPanel(panel);
+  }
 
   const availablePlayers = useMemo(
     () => players.filter((player) => notes[player.id]?.status !== "taken" && !draftedPlayerIdSet.has(player.id)).sort((a, b) => a.rank - b.rank),
@@ -158,9 +159,9 @@ export function DraftRoomHub({ players, notes, generatedAt, simulator, research,
       </div>
       <nav className="draft-intel-launcher" aria-label="Draft-day intelligence">
         <span>QUICK INTEL</span>
-        <button onClick={() => setIntelPanel("rankings")}><b>Rankings</b><small>{availablePlayers.length} available</small></button>
-        <button onClick={() => setIntelPanel("watchlist")}><b>Watchlist</b><small>{watchPlayers.length} flagged</small></button>
-        <button onClick={() => setIntelPanel("durability")}><b>Durability</b><small>{durabilityPlayers.length} risks</small></button>
+        <button onClick={() => showIntelPanel("rankings")}><b>Rankings</b><small>{availablePlayers.length} available</small></button>
+        <button onClick={() => showIntelPanel("watchlist")}><b>Watchlist</b><small>{watchPlayers.length} flagged</small></button>
+        <button onClick={() => showIntelPanel("durability")}><b>Durability</b><small>{durabilityPlayers.length} risks</small></button>
       </nav>
     </header>
 

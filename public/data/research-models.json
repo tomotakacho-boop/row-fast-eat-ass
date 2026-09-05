@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-31T19:07:02.119Z",
+  "generatedAt": "2026-09-05T01:33:43.137Z",
   "teamResearch": {
     "projectionSeason": 2026,
     "historicalSeason": 2025,
@@ -478,7 +478,7 @@
       "positionBaseline": 8
     },
     "disclaimer": "A relative durability-risk index, not an injury probability or medical diagnosis. A score of 100 means the strongest combined risk signal in this model—not certainty that a player will be injured.",
-    "sourcePlayerCount": 11852
+    "sourcePlayerCount": 11854
   },
   "sources": [
     {
