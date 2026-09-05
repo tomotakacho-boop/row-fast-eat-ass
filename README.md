@@ -1,6 +1,6 @@
 # Row Fast Eat Ass Season 10 · Draft Room 2026
 
-A standalone draft-day website for the 12-team ESPN full-PPR league **Row Fast Eat Ass Season 10**. This repository contains only this league’s room, configuration, player pool, watchlists, research models, mock-draft history interface, and Netlify deployment setup.
+A standalone draft-planning website for the 12-team ESPN full-PPR league **Row Fast Eat Ass Season 10**. This repository contains only this league’s room, configuration, player pool, watchlists, research models, roster-simulation lab, and Netlify deployment setup.
 
 ## League configuration
 
@@ -17,16 +17,15 @@ The confirmed draft order is Team Rex, Wet Willies, Juulio Jones, Shayshawn Broc
 
 ## Included tools
 
-- Integrated **Draft room** with a hard-CPU mock simulator and the complete sortable player research board
-- Manual all-team drafting or automated CPU opponents
-- On-demand Monte Carlo opportunity-cost simulations on your turns
-- One-click Available, Taken, and My Pick controls
+- **Mock draft simulations** that generate and rank the best complete roster builds from confirmed slot #5
+- On-demand Monte Carlo modeling—nothing runs merely because the tab was opened
+- A round-by-round target map based on the players appearing most often in the current top ten builds
+- Add five more simulated teams at a time, duplicate any roster, and replace any individual player through a practical filtered picker
 - Full-PPR ranks, Boris tiers, ADP, projections, PPG, per-game stats, expert range, confidence, and injury risk
-- **Demo live draft board** with nine practice scenarios
 - **Rankings & context** with all-position tiers, positional tiers, offensive environments, O-line context, K, and D/ST
 - **Injuries & durability** with current availability and a transparent 0–100 relative risk index
 - The complete shared **Like / Avoid / Rookie / Potential Diamond / League Winner** watchlist and source-linked rationale
-- Ten draft-plan scenarios, roster construction, saved mock history, team grades, and full-roster reports
+- Ten draft-plan scenarios and roster construction tools
 - Methods and sources for the ranking, projection, injury, research, and Monte Carlo layers
 
 ## Deploy on GitHub and Netlify
@@ -72,13 +71,12 @@ pnpm build-research-models
 - `public/data/injury-overrides.json` is the dated source-linked injury correction layer used during refreshes.
 - `public/data/research-models.json` stores O-line, team-environment, and historical durability context.
 
-Personal draft status, editable watchlist changes, notes, plans, and mock history are saved in the current browser’s local storage. The repository seeds are available on every device, but changes made inside the deployed website do not automatically write back to GitHub. Export board JSON from **Methods & sources** if you want to move current browser state to another device.
+Generated and edited simulation rosters, editable watchlist changes, notes, and plans are saved in the current browser’s local storage. The repository seeds are available on every device, but changes made inside the deployed website do not automatically write back to GitHub. Export board JSON from **Methods & sources** if you want to move current browser state to another device.
 
 ## Important source files
 
 - `app/RedraftBoard.tsx` — standalone league room and league-specific views
-- `app/DraftRoomHub.tsx` — integrated simulator/research workspace
-- `app/DemoLiveDraftBoard.tsx` — live practice board and mock history
+- `app/MockDraftSimulations.tsx` — on-demand top-roster generator, target map, comparison list, and roster editor
 - `app/monteCarloDraft.ts` — opportunity-cost simulation and draft grading
 - `app/UnifiedWatchlist.tsx` — editable unified watchlist
 - `app/TeamEnvironmentBoard.tsx` — team production and offensive-line context

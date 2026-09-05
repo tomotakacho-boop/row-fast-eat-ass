@@ -12,8 +12,7 @@ import { getPotentialDiamond } from "./potentialDiamonds";
 import { getLeagueWinner } from "./leagueWinners";
 import { DraftIntelligenceMethodology } from "./DraftIntelligenceMethodology";
 import { FlockPlayerContext } from "./FlockPlayerContext";
-import { DemoLiveDraftBoard, MockDraftBoard } from "./DemoLiveDraftBoard";
-import { DraftRoomHub } from "./DraftRoomHub";
+import { MockDraftSimulations } from "./MockDraftSimulations";
 import { getPlayerResearch } from "./draftResearch";
 import { injuryRiskBand, injuryRiskScore, isHighInjuryRisk } from "./injuryRisk";
 type Player = {
@@ -145,7 +144,7 @@ const LEGACY_STORAGE_KEY = "league-b-full-ppr-state-v1";
 const OFFICIAL_SLOT = leagueBConfig.draft.officialSlot;
 const scenarios = "ABCDEFGHIJ".split("");
 const positions = ["ALL", "QB", "RB", "WR", "TE", "K", "DST"];
-const tabs = [["board", "Draft room"], ["demo-live", "Demo live draft board"], ["rankings", "Rankings & context"], ["injuries", "Injuries & durability"], ["watchlists", "Watchlists"], ["plans", "Draft plan & roster"], ["methods", "Methods & sources"]] as const;
+const tabs = [["simulations", "Mock draft simulations"], ["rankings", "Rankings & context"], ["injuries", "Injuries & durability"], ["watchlists", "Watchlists"], ["plans", "Draft plan & roster"], ["methods", "Methods & sources"]] as const;
 const teams = leagueBConfig.teams;
 const archetypes = ["Balanced", "RB foundation", "WR volume", "Elite QB", "Late QB", "Hero RB", "Anchor TE"];
 const defaultState: State = { notes: {}, plans: Object.fromEntries(scenarios.map((scenario) => [scenario, Array(16).fill("")])), slot: OFFICIAL_SLOT, slotConfirmed: true, history: [] };
@@ -279,7 +278,7 @@ export default function RedraftBoard() {
     const [error, setError] = useState("");
     const [state, setState] = useState<State>(defaultState);
     const [hydrated, setHydrated] = useState(false);
-    const [tab, setTab] = useState<(typeof tabs)[number][0]>("board");
+    const [tab, setTab] = useState<(typeof tabs)[number][0]>("simulations");
     const [search, setSearch] = useState("");
     const [position, setPosition] = useState("ALL");
     const [status, setStatus] = useState("available");
@@ -330,8 +329,7 @@ export default function RedraftBoard() {
     <section className="command-strip b-command"><div><span className="metric-label">FORMAT</span><strong>Full PPR redraft</strong></div><div><span className="metric-label">TEAMS</span><strong>12 · Snake</strong></div><div><span className="metric-label">YOUR SLOT</span><strong>#{state.slot} · Confirmed</strong></div><div><span className="metric-label">WAIVERS</span><strong>$100 FAAB</strong></div><div className="pick-run"><span className="metric-label">YOUR 16 PICKS</span><strong>{Array.from({ length: 16 }, (_, index) => snakePick(index + 1, state.slot)).join(" · ")}</strong></div></section>
     <nav className="tabs">{tabs.map(([id, label]) => <button className={tab === id ? "active" : ""} onClick={() => setTab(id)} key={id}>{label}</button>)}</nav>
     {error && <div className="notice error">Row Fast Eat Ass Season 10 data could not load: {error}</div>}{!snapshot && !error && <div className="loading-panel"><span className="spinner"/>Loading full-PPR rankings and projections…</div>}
-    {snapshot && tab === "board" && <DraftRoomHub players={players} notes={state.notes} generatedAt={snapshot.generatedAt} onOpen={setSelectedId} simulator={(onDraftStateChange) => <MockDraftBoard players={players} notes={state.notes} teams={draftOrder()} userTeam={USER_TEAM} slot={state.slot} rounds={16} onOpen={setSelectedId} leagueId="league-b" leagueName="Row Fast Eat Ass Season 10" starterSlots={leagueBConfig.roster.slots} onDraftStateChange={onDraftStateChange}/>} research={(draftedPlayerIds) => <RedraftResearch players={players} state={state} filtered={filtered.filter((player) => !draftedPlayerIds.has(player.id))} search={search} setSearch={setSearch} position={position} setPosition={setPosition} status={status} setStatus={setStatus} tier={tier} setTier={setTier} tiers={tiers} flag={flag} setFlag={setFlag} slot={state.slot} open={setSelectedId} mark={mark}/>}/>}
-    {snapshot && tab === "demo-live" && <DemoLiveDraftBoard players={players} notes={state.notes} teams={draftOrder()} userTeam={USER_TEAM} slot={state.slot} rounds={16} onOpen={setSelectedId} starterSlots={leagueBConfig.roster.slots}/>} 
+    {snapshot && tab === "simulations" && <MockDraftSimulations players={players} notes={state.notes} teams={draftOrder()} userTeam={USER_TEAM} slot={state.slot} rounds={16} onOpen={setSelectedId}/>} 
     {snapshot && tab === "rankings" && <><RedraftRankings players={players} notes={state.notes} open={setSelectedId}/><TeamEnvironmentBoard players={players} generatedAt={snapshot.generatedAt}/></>} 
     {snapshot && tab === "injuries" && <InjuryResearchBoard players={players} generatedAt={snapshot.generatedAt} open={setSelectedId}/>} 
     {snapshot && tab === "watchlists" && <RedraftWatchlists players={players} state={state} update={update} open={setSelectedId}/>}
