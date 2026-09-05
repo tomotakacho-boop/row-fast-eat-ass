@@ -18,6 +18,7 @@ The confirmed draft order is Team Rex, Wet Willies, Juulio Jones, Shayshawn Broc
 ## Included tools
 
 - **Mock draft simulations** that generate and rank the best complete roster builds from confirmed slot #5
+- A source-labeled **Flock pick-5 strategy prior** that reacts to the Round 1 position, rewards balanced five-round RB/WR builds, and delays QB/TE unless value falls
 - On-demand Monte Carlo modeling—nothing runs merely because the tab was opened
 - A round-by-round target map based on the players appearing most often in the current top ten builds
 - Add five more simulated teams at a time, duplicate any roster, and replace any individual player through a practical filtered picker
@@ -70,6 +71,7 @@ pnpm build-research-models
 - `public/data/expert-watchlist.json`, `draft-research-2026.json`, `league-winners.json`, and `potential-diamonds.json` preserve the research and rationale behind those flags.
 - `public/data/injury-overrides.json` is the dated source-linked injury correction layer used during refreshes.
 - `public/data/research-models.json` stores O-line, team-environment, and historical durability context.
+- `public/data/flock-pick-5-strategy-2026.json` stores the user-supplied picks 5–8 transcript takeaways, the pick-5 example mock, and the bounded rules used by the simulation.
 
 Generated and edited simulation rosters, editable watchlist changes, notes, and plans are saved in the current browser’s local storage. The repository seeds are available on every device, but changes made inside the deployed website do not automatically write back to GitHub. Export board JSON from **Methods & sources** if you want to move current browser state to another device.
 
@@ -78,6 +80,7 @@ Generated and edited simulation rosters, editable watchlist changes, notes, and 
 - `app/RedraftBoard.tsx` — standalone league room and league-specific views
 - `app/MockDraftSimulations.tsx` — on-demand top-roster generator, target map, comparison list, and roster editor
 - `app/monteCarloDraft.ts` — opportunity-cost simulation and draft grading
+- `app/pickFiveStrategy.ts` — pick-5 roster-shape, player-timing, and transcript-example priors
 - `app/UnifiedWatchlist.tsx` — editable unified watchlist
 - `app/TeamEnvironmentBoard.tsx` — team production and offensive-line context
 - `app/InjuryResearchBoard.tsx` — injury and durability workspace

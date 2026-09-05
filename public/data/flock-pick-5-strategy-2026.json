@@ -1,0 +1,40 @@
+{
+  "version": "2026-09-04-v1",
+  "integratedAt": "2026-09-04",
+  "publisher": "Flock Fantasy",
+  "title": "How to Win Your Fantasy League (Picks 5-8)",
+  "url": "https://www.youtube.com/watch/rad41JDQvy8",
+  "sourceType": "YouTube transcript supplied by the user",
+  "focus": "Pick 5 in a 12-team redraft league",
+  "sourceContext": "The example mock used Sleeper pricing. Player timing is therefore translated through the site's current ESPN/full-PPR ADP rather than copied as a hard round rule.",
+  "usage": "Soft draft-construction and opportunity-cost prior. Current availability, projections, injury status, league rules, ADP, tier breaks, and personal Avoid flags retain priority.",
+  "principles": [
+    "Treat pick 5 as a conditional RB-or-WR fork; take a clear top-four faller when one reaches the slot.",
+    "A Round 1 wide receiver increases the urgency to secure a viable running back in Round 2 before the position thins.",
+    "A Round 1 running back preserves flexibility to take the best RB or WR value in Round 2.",
+    "Prefer a five-round full house of three RB and two WR or three WR and two RB, with a mild preference for the 3 RB / 2 WR version.",
+    "A 2 RB / 2 WR / 1 TE opening is acceptable when an elite tight end falls materially below market price.",
+    "Do not force quarterback or tight end early. Consider them when a genuine tier or ADP discount appears, otherwise build RB and WR first.",
+    "Robust RB and zero-RB paths are board-dependent exceptions, not default instructions.",
+    "Later rounds should balance upside backs and receivers with stable weekly volume, then fill quarterback and tight end at value."
+  ],
+  "pickFiveMockExample": [
+    { "round": 1, "player": "CeeDee Lamb", "position": "WR", "lesson": "Open with an elite, high-volume receiver when the top running backs are gone." },
+    { "round": 2, "player": "Kenneth Walker III", "position": "RB", "lesson": "Respond to a WR opening by securing an RB before the next tier is exhausted." },
+    { "round": 3, "player": "Malik Nabers", "position": "WR", "lesson": "Take a high-volume receiver who falls below the analyst's valuation." },
+    { "round": 4, "player": "Colston Loveland", "position": "TE", "lesson": "Break the RB/WR build only for a meaningful elite-TE value." },
+    { "round": 5, "player": "Bhayshul Tuten", "position": "RB", "lesson": "Restore positional balance with an upside RB2 candidate." },
+    { "round": 6, "player": "Carnell Tate", "position": "WR", "lesson": "Add receiver upside after the starting core is stable." },
+    { "round": 7, "player": "Jonathan Brooks", "position": "RB", "lesson": "Use a mid-round bench slot on contingent running-back upside when healthy and available." },
+    { "round": 8, "player": "Jordan Mason", "position": "RB", "lesson": "Keep attacking asymmetric backfield upside." },
+    { "round": 9, "player": "Trevor Lawrence", "position": "QB", "lesson": "Fill quarterback after the RB/WR core when a viable starter remains." },
+    { "round": 10, "player": "Jaylen Coker", "position": "WR", "lesson": "Close the example with a late receiver swing." }
+  ],
+  "modelApplication": {
+    "roundOne": "Small named-player and RB/WR bonuses; early QB/TE is penalized unless the market discount is exceptional.",
+    "roundTwoResponse": "A WR opener creates a strong RB need bonus. An RB opener keeps RB and WR nearly neutral.",
+    "roundFiveCheckpoint": "The engine rewards 3/2 RB-WR builds and permits 2/2 plus TE when the TE was a value.",
+    "quarterbackAndTightEnd": "Early selections require a visible ADP/tier discount; unfilled positions gain urgency from Round 9 onward.",
+    "examplePlayers": "The ten-round mock provides small round-local priors only; it never guarantees availability or forces a selection."
+  }
+}

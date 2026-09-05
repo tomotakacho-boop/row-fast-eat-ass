@@ -1,4 +1,5 @@
 import { researchPlayerAdjustment } from "./draftResearch";
+import { pickFiveRosterUtility, pickFiveStrategyAdjustment } from "./pickFiveStrategy";
 
 export type MonteCarloPlayer = {
   id: string;
@@ -244,6 +245,8 @@ function chooseUser(
   random: () => number,
   rounds: number,
   maximums: PositionMaximums,
+  slot: number,
+  teamCount: number,
 ) {
   const candidates = viableWindow(ordered, used, roster, round, rounds, maximums);
   return candidates.map((player, index) => {
@@ -255,7 +258,19 @@ function chooseUser(
     const timing = -Math.max(0, marketRank(player) - overall - (round <= 3 ? 5 : 9)) * .35;
     const preference = (note?.liked ? 10 : 0) - (note?.avoid ? 34 : 0);
     const research = researchPlayerAdjustment(player.name, round, 16, "league-b");
-    const score = 325 - player.rank + ppg(player) * 4.8 + needScore(player, roster, round) + value + health + tierDrop + timing + preference + research + normal(random) * 1.4;
+    const pickFive = pickFiveStrategyAdjustment({
+      playerName: player.name,
+      position: player.pos,
+      round,
+      overall,
+      slot,
+      teamCount,
+      counts: rosterCounts(roster),
+      openerPosition: roster[0]?.pos,
+      adp: player.adp,
+      rank: player.rank,
+    });
+    const score = 325 - player.rank + ppg(player) * 4.8 + needScore(player, roster, round) + value + health + tierDrop + timing + preference + research + pickFive + normal(random) * 1.4;
     return { player, score };
   }).sort((a, b) => b.score - a.score || a.player.rank - b.player.rank)[0]?.player;
 }
@@ -382,7 +397,7 @@ export function runMonteCarloDecision({
           if (overall === decisionOverall && !used.has(branch.candidate.id)) {
             selected = branch.candidate;
             branch.survived += 1;
-          } else selected = chooseUser(ordered, used, roster, round, overall, notes, random, rounds, positionMaximums);
+          } else selected = chooseUser(ordered, used, roster, round, overall, notes, random, rounds, positionMaximums, slot, teamCount);
         } else selected = chooseCpu(ordered, used, roster, round, overall, owner.team, recentPositions, random, rounds, positionMaximums);
         if (!selected) break;
         used.add(selected.id);
@@ -401,7 +416,7 @@ export function runMonteCarloDecision({
       const construction = constructionScore(roster, metrics.starterCount);
       const costs = acquired.get(userTeam) || [];
       const draftValue = roster.length ? roster.reduce((sum, player, index) => sum + clamp((costs[index] || player.rank) - marketRank(player), -24, 24), 0) / roster.length : 0;
-      const utility = metrics.starterVorp + metrics.depthVorp * .25 + construction * .08 + draftValue * .05;
+      const utility = metrics.starterVorp + metrics.depthVorp * .25 + construction * .08 + draftValue * .05 + pickFiveRosterUtility(roster, slot, teamCount);
       branch.utility.push(utility);
       branch.starterPPG.push(metrics.starterPPG);
       branch.starterVorp.push(metrics.starterVorp);

@@ -857,6 +857,20 @@ tbody tr.player-research-row:hover > td { background: #e4ebe5; }
 .simulation-hero-metrics span { display: grid; place-content: center; gap: 4px; padding: 12px; border-right: 1px solid var(--line); text-align: center; }
 .simulation-hero-metrics b { color: var(--forest); font: 850 25px Georgia, serif; }.simulation-hero-metrics small { color: var(--muted); font-size: 6px; font-weight: 900; text-transform: uppercase; }
 .simulation-hero > button, .simulation-empty button, .simulation-list-heading > button { border: 0; color: var(--forest); background: var(--acid); font-size: 9px; font-weight: 950; text-transform: uppercase; cursor: pointer; }.simulation-hero > button:disabled, .simulation-empty button:disabled, .simulation-list-heading > button:disabled { opacity: .55; cursor: wait; }
+.pick-five-brief { margin-bottom: 20px; border: 1px solid var(--forest); background: var(--surface); }
+.pick-five-brief > header { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 14px 16px; color: white; background: var(--forest); }
+.pick-five-brief h3 { margin: 3px 0 0; color: white; font: 800 20px Georgia, serif; }
+.pick-five-brief > header a { flex: 0 0 auto; padding: 8px 10px; border: 1px solid #78958a; color: white; font-size: 7px; font-weight: 900; text-decoration: none; text-transform: uppercase; }
+.pick-five-principles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); }
+.pick-five-principles article { display: grid; grid-template-columns: 40px 1fr; gap: 4px 9px; min-height: 116px; padding: 13px; background: #fbfaf6; }
+.pick-five-principles article > span { grid-row: 1 / span 2; display: grid; place-items: center; align-self: start; min-height: 34px; padding: 4px; color: var(--forest); background: var(--acid); font: 900 10px Georgia, serif; text-align: center; }
+.pick-five-principles b { align-self: end; color: var(--forest); font-size: 9px; }
+.pick-five-principles p { margin: 0; color: var(--muted); font-size: 7px; line-height: 1.48; }
+.pick-five-example { display: flex; align-items: stretch; overflow-x: auto; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.pick-five-example > span { display: grid; place-items: center; min-width: 155px; padding: 10px 12px; color: white; background: var(--forest-2); font-size: 7px; font-weight: 900; letter-spacing: .07em; }
+.pick-five-example em { min-width: 112px; padding: 9px 10px; border-right: 1px solid var(--line); color: var(--muted); font-size: 6px; font-style: normal; }
+.pick-five-example em b { display: block; overflow: hidden; margin-top: 3px; color: var(--ink); font-size: 7px; text-overflow: ellipsis; white-space: nowrap; }
+.pick-five-caveat { margin: 0; padding: 10px 14px; color: var(--muted); background: #eef2e8; font-size: 7px; line-height: 1.5; }
 .simulation-empty { display: grid; place-items: center; min-height: 420px; padding: 50px; border: 1px solid var(--line); background: var(--surface); text-align: center; }.simulation-empty strong { color: var(--forest); font: 800 25px Georgia, serif; }.simulation-empty p { max-width: 630px; margin: 10px auto 20px; color: var(--muted); font-size: 10px; line-height: 1.5; }.simulation-empty button { min-height: 44px; padding: 12px 18px; }
 .simulation-targets { margin-bottom: 20px; border: 1px solid var(--line); background: var(--surface); }.simulation-targets > header, .simulation-list-heading { display: flex; align-items: end; justify-content: space-between; gap: 20px; padding: 16px 18px; }.simulation-targets h3, .simulation-list-heading h3 { margin: 3px 0 0; color: var(--forest); font: 800 21px Georgia, serif; }.simulation-targets > header > p { max-width: 530px; margin: 0; color: var(--muted); font-size: 8px; line-height: 1.45; text-align: right; }
 .simulation-targets > div { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; padding: 1px; background: var(--line); }.simulation-targets article { display: grid; grid-template-columns: 42px 1fr; gap: 8px; min-height: 88px; padding: 10px; background: #fbfaf6; }.simulation-targets article > span { color: var(--forest); font: 850 15px Georgia, serif; }.simulation-targets article > span small { display: block; margin-top: 3px; color: var(--muted); font: 750 6px ui-monospace, monospace; }.simulation-targets article > div { display: grid; align-content: start; gap: 3px; }.simulation-targets button { display: flex; justify-content: space-between; gap: 7px; padding: 3px 0; border: 0; color: var(--ink); background: transparent; text-align: left; }.simulation-targets button:hover b { color: var(--forest-2); text-decoration: underline; }.simulation-targets button b { overflow: hidden; font-size: 7px; text-overflow: ellipsis; white-space: nowrap; }.simulation-targets button small, .simulation-targets em { color: var(--muted); font-size: 6px; font-style: normal; white-space: nowrap; }
@@ -871,10 +885,12 @@ tbody tr.player-research-row:hover > td { background: #e4ebe5; }
 
 @media (max-width: 1050px) {
   .simulation-hero { grid-template-columns: 1fr 1fr; }.simulation-hero > div:first-child { grid-column: 1 / -1; }.simulation-hero > button { min-height: 58px; }
+  .pick-five-principles { grid-template-columns: repeat(2, 1fr); }
   .simulation-targets > div, .simulation-pick-grid { grid-template-columns: repeat(2, 1fr); }.simulation-alternatives { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 680px) {
   .simulation-hero { grid-template-columns: 1fr; }.simulation-hero > div:first-child { grid-column: auto; }.simulation-hero-metrics { grid-template-columns: repeat(3, 1fr); }
+  .pick-five-brief > header { align-items: flex-start; }.pick-five-principles { grid-template-columns: 1fr; }
   .simulation-targets > header, .simulation-list-heading { align-items: flex-start; flex-direction: column; }.simulation-targets > header > p { text-align: left; }
   .simulation-targets > div, .simulation-pick-grid, .simulation-alternatives { grid-template-columns: 1fr; }.simulation-roster-list summary { grid-template-columns: 58px 1fr; }.simulation-roster-list summary > strong { grid-column: 2; text-align: left; }.simulation-score-strip { grid-template-columns: repeat(3, 1fr); }.simulation-roster-actions { align-items: stretch; flex-direction: column; }.simulation-editor-scrim { padding: 0; }.simulation-editor { width: 100vw; max-height: 100vh; min-height: 100vh; border: 0; }.simulation-editor-tools { grid-template-columns: 1fr; }.simulation-editor-tools > div { overflow-x: auto; min-height: 35px; }
 }

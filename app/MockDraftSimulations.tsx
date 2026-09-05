@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { runMonteCarloDecision, type MonteCarloPlayer, type MonteCarloTeam } from "./monteCarloDraft";
+import { describePickFiveBuild, pickFiveStrategy } from "./pickFiveStrategy";
 
 type SimulationPlayer = MonteCarloPlayer & {
   team: string;
@@ -167,12 +168,16 @@ export function MockDraftSimulations({ players, notes, teams, userTeam, slot, ro
       const candidates = report.results.flatMap((result, index) => {
         const ids = result.mostLikelyPath.sort((a, b) => a.overall - b.overall).map((pick) => pick.playerId).slice(0, rounds);
         if (ids.length !== rounds || new Set(ids).size !== ids.length) return [];
+        const rosterPlayers = ids.flatMap((id) => {
+          const player = playersById.get(id);
+          return player ? [player] : [];
+        });
         const metrics = evaluateRoster(ids, playersById, slot, teams.length);
         const opener = playersById.get(ids[0]);
         return [{
           id: `mc-${seed}-${index}`,
           name: opener ? `${opener.name} opening` : `Simulation ${index + 1}`,
-          thesis: `Monte Carlo path from pick #${slot}; ${result.simulations} opponent-room outcomes modeled with roster constraints and current availability.`,
+          thesis: `${describePickFiveBuild(rosterPlayers)}. ${result.simulations} opponent-room outcomes modeled with current availability.`,
           ids,
           seed,
           source: "monte-carlo" as const,
@@ -255,6 +260,18 @@ export function MockDraftSimulations({ players, notes, teams, userTeam, slot, ro
       <div className="simulation-hero-metrics"><span><b>{rosters.length}</b><small>saved team builds</small></span><span><b>{baseline.length}</b><small>top baseline paths</small></span><span><b>#{slot}</b><small>confirmed slot</small></span></div>
       <button disabled={busy} onClick={() => runBatch(false)}>{busy ? "Running simulations…" : rosters.length ? "Rebuild top 10" : "Run top 10 simulations"}</button>
     </div>
+
+    <section className="pick-five-brief">
+      <header><div><p className="eyebrow">FLOCK PICK-5 STRATEGY PRIOR</p><h3>A flexible opening script—not a forced player list</h3></div><a href={pickFiveStrategy.url} target="_blank" rel="noreferrer">Watch source ↗</a></header>
+      <div className="pick-five-principles">
+        <article><span>R1</span><b>Choose the best RB/WR branch</b><p>Take a clear top-four faller. Otherwise compare CeeDee, McCaffrey, Amon-Ra, James Cook, JSN, and Jonathan Taylor through current rank, PPG, price, and health.</p></article>
+        <article><span>R2</span><b>React to your opener</b><p>A WR start creates real RB urgency. An RB start keeps both RB and WR paths open, including a discounted second anchor back.</p></article>
+        <article><span>R5</span><b>Reach the full-house checkpoint</b><p>The preferred core is 3 RB / 2 WR, with 3 WR / 2 RB also strong. A 2/2/1 TE start is allowed only when the tight end is a genuine value.</p></article>
+        <article><span>QB/TE</span><b>Pay only for a fall</b><p>The engine delays QB and TE unless the tier and ADP discount justify leaving the RB/WR build. Missing positions gain urgency beginning around Round 9.</p></article>
+      </div>
+      <div className="pick-five-example"><span>VIDEO&apos;S PICK-5 EXAMPLE</span>{pickFiveStrategy.pickFiveMockExample.map((entry) => <em key={`${entry.round}-${entry.player}`}>R{entry.round} <b>{entry.player}</b></em>)}</div>
+      <p className="pick-five-caveat">The example was drafted against Sleeper pricing. This site converts the ideas into soft scoring adjustments against the current ESPN/full-PPR market; unavailable, injured, avoided, or badly priced players are not forced into a roster.</p>
+    </section>
 
     {baseline.length > 0 && <section className="simulation-targets"><header><div><p className="eyebrow">ACTUAL-DRAFT TARGET MAP</p><h3>What appears most often in the top ten</h3></div><p>Percentages are appearance rates across the current top ten, not guarantees that a player reaches your pick.</p></header><div>{targetBoard.map((targets, index) => <article key={index}><span>R{index + 1}<small>#{pickForRound(index + 1, slot, teams.length)}</small></span><div>{targets.length ? targets.map(({ player, frequency }) => player && <button key={player.id} onClick={() => onOpen(player.id)}><b>{player.name}</b><small>{player.pos} · {frequency.toFixed(0)}%</small></button>) : <em>No stable target</em>}</div></article>)}</div></section>}
 
