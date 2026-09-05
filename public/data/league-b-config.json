@@ -1,0 +1,76 @@
+{
+  "id": "b",
+  "leagueName": "Row Fast Eat Ass Season 10",
+  "displayName": "Row Fast Eat Ass Season 10",
+  "season": 2026,
+  "platform": "ESPN",
+  "team": {
+    "name": "Meet The Robinson's",
+    "manager": "Tomotaka Cho"
+  },
+  "format": {
+    "teams": 12,
+    "matchup": "Head-to-head points",
+    "receptions": 1,
+    "redraft": true,
+    "keepers": 0
+  },
+  "draft": {
+    "type": "Snake",
+    "date": "2026-09-08T18:30:00-05:00",
+    "timeZone": "America/Chicago",
+    "secondsPerPick": 90,
+    "pickTrading": false,
+    "orderStatus": "confirmed",
+    "officialSlot": 5
+  },
+  "roster": {
+    "size": 16,
+    "starters": 9,
+    "bench": 7,
+    "injuredReserve": 1,
+    "slots": { "QB": 1, "RB": 2, "WR": 2, "TE": 1, "FLEX": 1, "DST": 1, "K": 1 },
+    "maximums": { "QB": 4, "RB": 8, "WR": 8, "TE": 3, "DST": 3, "K": 3 }
+  },
+  "waivers": {
+    "system": "Free Agent Budget",
+    "startingBudget": 100,
+    "seasonAcquisitionLimit": null,
+    "lineupLock": "Individual scheduled game time",
+    "espnUndroppableList": true
+  },
+  "scoring": {
+    "passingYard": 0.04,
+    "passingTouchdown": 4,
+    "interceptionThrown": -2,
+    "passingTwoPoint": 2,
+    "rushingYard": 0.1,
+    "rushingTouchdown": 6,
+    "rushingTwoPoint": 2,
+    "receivingYard": 0.1,
+    "reception": 1,
+    "receivingTouchdown": 6,
+    "receivingTwoPoint": 2,
+    "fumbleLost": -2,
+    "patMade": 1,
+    "fieldGoalMissed": -1,
+    "fieldGoal0to39": 3,
+    "fieldGoal40to49": 4,
+    "fieldGoal50to59": 5,
+    "fieldGoal60plus": 5
+  },
+  "teams": [
+    { "team": "Team Rex", "manager": "Peter Rex" },
+    { "team": "Wet Willies", "manager": "Will Cordonnier" },
+    { "team": "Juulio Jones", "manager": "Seamus Mulcahy" },
+    { "team": "Shayshawn Broccoli", "manager": "Ethan Ashley" },
+    { "team": "Meet The Robinson's", "manager": "Tomotaka Cho" },
+    { "team": "Eat The Boutte Like Groceries", "manager": "Tim Harris" },
+    { "team": "OnlyFannins", "manager": "Jack Coffman" },
+    { "team": "Pukana Matatas", "manager": "Jackson Herz" },
+    { "team": "Rex On Rex", "manager": "Liam Rex" },
+    { "team": "Two-Point Conversion Therapy", "manager": "Parker Sikora" },
+    { "team": "Goff Balls", "manager": "Drew Eckler · Andrew Eckler" },
+    { "team": "Kittle League", "manager": "John Olson" }
+  ]
+}

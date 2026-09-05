@@ -1,0 +1,142 @@
+{
+  "version": "2026-08-31-league-winner-model-v2",
+  "asOf": "2026-08-31",
+  "source": {
+    "publisher": "The Fantasy Headliners",
+    "title": "MUST HAVE Mid-Round LEAGUE WINNERS in 2026 Fantasy Football",
+    "url": "https://www.youtube.com/watch?v=zue9eKf7J5Y",
+    "transcript": "tactiq-free-transcript-zue9eKf7J5Y.txt"
+  },
+  "methodology": "League Winner candidates combine source-attributed upside research with the site's league-adjusted opportunity-cost model. The model weights price-adjusted value over replacement (25%), role-expansion probability (20%), 80th-percentile Monte Carlo ceiling (15%), sustainable efficiency (15%), offense and line environment (10%), durability and expected availability (10%), and market confirmation (5%). The orange tag is a watchlist signal, not a guarantee and not an automatic replacement for league rank, current ADP, injury status, roster need, or confirmed-keeper availability.",
+  "candidates": [
+    {
+      "player": "D'Andre Swift",
+      "targetRounds": "Round 5",
+      "confidence": "Medium-high",
+      "thesis": "The presenters view Swift as an efficient RB3 whose 2025 production was surprisingly close to Saquon Barkley's despite 57 fewer carries.",
+      "evidence": "1,087 rushing yards, 34 receptions, 10 total touchdowns, 5.4 yards per touch and 14.3 fantasy points per game; top-20 in yards after contact and missed tackles forced, and top-10 in runs of 10-plus and 15-plus yards.",
+      "risk": "Backfield touches may remain split, so the case depends on efficiency and Chicago's offensive environment rather than workhorse volume."
+    },
+    {
+      "player": "Rhamondre Stevenson",
+      "targetRounds": "Round 6",
+      "confidence": "Medium",
+      "thesis": "The cheaper half of a projected committee offers weekly flex value and RB3 upside without paying the larger uncertainty premium attached to TreVeyon Henderson.",
+      "evidence": "Third in yards after contact per attempt, fifth in avoided tackles per attempt and third in fantasy points per touch among running backs; the transcript also cites strong receiving efficiency.",
+      "risk": "A true committee could cap weekly volume, and the receiving split remains uncertain."
+    },
+    {
+      "player": "Jaylen Warren",
+      "targetRounds": "Round 6",
+      "confidence": "Medium-high",
+      "thesis": "Warren is priced as an RB3 despite an RB16 finish and a receiving profile that can keep him productive in a split backfield.",
+      "evidence": "The transcript cites 53 avoided tackles, 1.58 yards per route run and a blind comparison that closely matched Breece Hall while Warren remained roughly three rounds cheaper.",
+      "risk": "Rico Dowdle and the new staff could prevent a clean lead-back role."
+    },
+    {
+      "player": "Tyler Warren",
+      "targetRounds": "Mid-round TE window",
+      "confidence": "High",
+      "thesis": "Vacated targets and an established connection with Daniel Jones give Warren a realistic path from TE5 to a top-two positional finish.",
+      "evidence": "As a rookie he led Indianapolis with 112 targets and produced 82 touches, 825 yards and five touchdowns; the presenters project that approximately 130 targets could produce roughly 100 catches and 1,100 yards.",
+      "risk": "The ceiling depends on target concentration and the health and effectiveness of the Colts passing game."
+    },
+    {
+      "player": "DJ Moore",
+      "targetRounds": "Round 5",
+      "confidence": "High",
+      "thesis": "Moore becomes Josh Allen's projected alpha receiver and reunites with Joe Brady, creating a rebound path well above his fifth-round price.",
+      "evidence": "From 2019 through 2024 Moore averaged 135 targets and more than 1,100 receiving yards; his best season came with Brady calling plays, while Allen previously supported elite Stefon Diggs volume.",
+      "risk": "Buffalo can distribute targets broadly if Moore does not clearly separate from the rest of the receiving group."
+    },
+    {
+      "player": "Parker Washington",
+      "targetRounds": "Round 7",
+      "confidence": "Medium-high",
+      "thesis": "A versatile, expanding role could make Washington Jacksonville's most frequently used receiver even if his formal depth-chart label remains fluid.",
+      "evidence": "The transcript cites a six-catch, 118-yard, one-touchdown first-team scrimmage and 25 targets of 20-plus yards in 2025, fifth most in the NFL.",
+      "risk": "His ADP has already climbed sharply, and Brian Thomas Jr. and Jakobi Meyers can keep the target hierarchy competitive."
+    },
+    {
+      "player": "Jonathon Brooks",
+      "targetRounds": "After Chuba Hubbard / value window",
+      "confidence": "Medium",
+      "thesis": "Brooks offers the cheaper side of Carolina's backfield with a plausible path to the lead role once fully reintegrated.",
+      "evidence": "The presenters point to his college pedigree, pass-catching use in camp, explosiveness and the possibility that he reaches Week 1 roughly 21 months removed from surgery.",
+      "risk": "Two ACL procedures, a possible four-to-six-week ramp-up and Chuba Hubbard's contract make this the highest medical-risk target in the group."
+    },
+    {
+      "player": "Michael Wilson",
+      "targetRounds": "Rounds 7–8",
+      "confidence": "High-upside / disputed",
+      "thesis": "The presenters believe Wilson's late-2025 breakout and projected 'Puka role' create top-12 upside at an eighth-round acquisition cost.",
+      "evidence": "They cite 126 targets, 78 catches, more than 1,000 yards, seven touchdowns and a WR2 overall stretch from Week 11 onward.",
+      "risk": "Other analysts expect target regression with Marvin Harrison Jr. healthy, so this tag intentionally coexists with the site's contrary expert-fade research."
+    },
+    {
+      "player": "TreVeyon Henderson",
+      "targetRounds": "Rounds 6–8 · room-dependent",
+      "confidence": "Medium-high",
+      "thesis": "The league model sees one of the board's largest price-adjusted running-back ceilings: starter-level VORP at a cost roughly 30 picks later than his modeled rank.",
+      "evidence": "Current full-PPR model: rank 50, ADP 79.7, 11.6 projected PPG, 7.4 PPG over replacement and an injury-risk score of 12. His receiving profile creates a three-down path if his workload expands.",
+      "risk": "A current leg issue and a potentially shared backfield keep this from being a volume guarantee; verify pre-draft health and role reports.",
+      "source": {
+        "publisher": "DraftAI",
+        "title": "Bhayshul Tuten vs. TreVeyon Henderson",
+        "url": "https://draftai.live/versus/bhayshul-tuten-vs-treveyon-henderson"
+      }
+    },
+    {
+      "player": "Jadarian Price",
+      "targetRounds": "Rounds 5–7",
+      "confidence": "High-upside / role-sensitive",
+      "thesis": "A first-round rookie with a newly opened workload path offers immediate redraft upside and unusually strong future keeper leverage in the NYFL.",
+      "evidence": "Current full-PPR model: rank 53, ADP 70.0, 11.4 projected PPG, 7.2 PPG over replacement and an injury-risk score of 12. Seattle's changed backfield raises both his touch ceiling and the probability of a second-half featured role.",
+      "risk": "The workload has not been proven in regular-season games, and a committee or pass-protection limitations could delay the breakout.",
+      "source": {
+        "publisher": "Fantasy Alarm",
+        "title": "Seattle Seahawks running back depth chart and 2026 fantasy outlook",
+        "url": "https://www.fantasyalarm.com/articles/nfl/running-backs/seahawks-running-back-depth-chart-2026-fantasy-football/194667"
+      }
+    },
+    {
+      "player": "Bhayshul Tuten",
+      "targetRounds": "Rounds 5–7",
+      "confidence": "Medium-high",
+      "thesis": "The model's combination of mid-round price, receiving utility and starter-level VORP gives Tuten a realistic route to an RB1 return without an RB1 acquisition cost.",
+      "evidence": "Current full-PPR model: rank 45, ADP 63.8, 12.1 projected PPG, 7.9 PPG over replacement and an injury-risk score of 13. His profile remains one of the strongest price-versus-ceiling combinations outside the early rounds.",
+      "risk": "Jacksonville lists Tuten and Chris Rodriguez Jr. as co-starters, so uncertain goal-line and early-down shares widen the outcome range.",
+      "source": {
+        "publisher": "NBC Sports",
+        "title": "Tuten and Rodriguez listed as co-starters",
+        "url": "https://www.nbcsports.com/fantasy/football/player-news/2026-08-11/tuten-c-rod-listed-as-co-starters-on-depth-chart"
+      }
+    },
+    {
+      "player": "Carnell Tate",
+      "targetRounds": "Rounds 6–8",
+      "confidence": "Medium",
+      "thesis": "A young receiver with a plausible path to become his offense's leading target can beat a WR3 acquisition cost by multiple tiers if the breakout arrives quickly.",
+      "evidence": "Current full-PPR model: rank 59, ADP 76.9, 11.9 projected PPG, 4.4 PPG over replacement and an injury-risk score of 13. Age, target-growth potential and keeper carryover make the ceiling more valuable than the median alone suggests.",
+      "risk": "Target competition and normal rookie volatility can produce an uneven first half, so price discipline remains important.",
+      "source": {
+        "publisher": "NFL.com",
+        "title": "2026 fantasy football breakout candidates",
+        "url": "https://www.nfl.com/news/2026-nfl-fantasy-football-breakout-candidates-at-qb-rb-wr-and-te"
+      }
+    },
+    {
+      "player": "Harold Fannin Jr.",
+      "targetRounds": "Rounds 6–8 · TE window",
+      "confidence": "Medium-high",
+      "thesis": "Fannin's route to a team-leading target share creates the kind of inexpensive positional advantage that can separate a roster at tight end.",
+      "evidence": "Current full-PPR model: rank 74, ADP 71.4, 11.1 projected PPG, 3.1 PPG over replacement, live Tier 2 and an injury-risk score of 14. NFL.com also identified him as a top-10 league-winner candidate after a TE6 rookie season and a clearer 2026 target path.",
+      "risk": "The market already prices in part of the breakout, and Cleveland's passing volume may limit the absolute ceiling if targets remain distributed.",
+      "source": {
+        "publisher": "NFL.com",
+        "title": "2026 fantasy football top 10 league-winners",
+        "url": "https://www.nfl.com/news/2026-nfl-fantasy-football-top-10-league-winners"
+      }
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "version": "2026-08-25-v1",
+  "asOf": "2026-08-25",
+  "publisher": "Fantasy Football Headliners",
+  "title": "UNBEATABLE Draft Strategy for EVERY PICK in 2026 Fantasy Football",
+  "url": "https://www.youtube.com/watch?v=-a3vvqeBKCM",
+  "sourceType": "YouTube transcript supplied by the user",
+  "usage": "Soft roster-construction prior; never overrides availability, league scoring, keeper cost, injury availability, or a material tier break.",
+  "principles": [
+    "Use draft-slot groups to set an opening preference, then remain flexible to the board.",
+    "Aim for roughly three running backs and two wide receivers by the end of Round 5 in ordinary 12-team redraft builds.",
+    "Picks 1-2 lean elite running back; picks 3-5 lean elite wide receiver; picks 6-8 often lean running back; picks 9-10 lean wide receiver; picks 11-12 favor one RB and one WR at the turn.",
+    "Rounds 6-10 fill quarterback and tight end at value while continuing RB/WR depth.",
+    "Use the final three rounds for defense, kicker, and one upside lottery ticket when the league has 16 rounds.",
+    "Treat player-specific injury and depth-chart claims in the transcript as dated signals that require current verification."
+  ],
+  "modelApplication": {
+    "openingSlotPrior": "Small position bonus by slot group in Rounds 1-3",
+    "roundFiveBalance": "Soft deficit bonus toward a 3 RB / 2 WR opening core",
+    "middleRounds": "Small QB/TE fill bonus only when the starting slot remains empty",
+    "closingRounds": "League-length-aware DST/K timing plus a final skill-player upside bonus"
+  }
+}

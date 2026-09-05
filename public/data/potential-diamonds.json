@@ -1,0 +1,153 @@
+{
+  "version": "2026-08-25-v1",
+  "asOf": "2026-08-25",
+  "label": "NYFL potential diamonds",
+  "definition": "Young, inexpensive players whose 2026 acquisition cost could become a materially better 2027 keeper price. This is an upside screen, not a breakout probability or a redraft ranking.",
+  "methodology": {
+    "formula": "30% 2027 role ceiling + 25% keeper-cost leverage + 20% prospect/dynasty signal + 15% current path to snaps + 10% durability and rosterability",
+    "rules": [
+      "Prefer players likely to cost a Round 10-16 selection or remain available for a Round 16 free-agent keeper price.",
+      "Require a plausible route to a starting role or premium fantasy usage by 2027.",
+      "Do not treat the score as an injury-free probability or a recommendation to reach above the target range.",
+      "Recheck role, health, and ADP before the draft; a rising price can erase the keeper edge."
+    ]
+  },
+  "candidates": [
+    {
+      "player": "Denzel Boston",
+      "score": 92,
+      "targetRounds": "12-16",
+      "confidence": "High",
+      "keeperThesis": "Second-round NFL capital, first-team work, size and red-zone traits create a realistic path to Cleveland's long-term perimeter WR1 role at a near-free keeper cost.",
+      "redraftPath": "Can earn immediate perimeter and red-zone work; current price leaves room for the role to grow without forcing him into a weekly lineup.",
+      "risk": "Cleveland's passing environment may cap Year 1 production and KC Concepcion could command the higher-volume role.",
+      "sources": [
+        { "publisher": "NFL.com", "title": "Six late-round sleepers to target", "url": "https://www.nfl.com/news/2026-nfl-fantasy-football-six-late-round-sleepers-to-target" },
+        { "publisher": "FantasyPros", "title": "Late-round draft strategy", "url": "https://www.fantasypros.com/2026/08/2026-fantasy-football-late-round-draft-strategy/" }
+      ]
+    },
+    {
+      "player": "KC Concepcion",
+      "score": 89,
+      "targetRounds": "10-13",
+      "confidence": "High",
+      "keeperThesis": "Premium rookie capital and a short-area role give him the cleanest volume path in Cleveland; a Round 10-plus price could become a weekly PPR starter kept well below market.",
+      "redraftPath": "Designed touches and slot volume can make him useful before the offense fully develops.",
+      "risk": "His draft price is rising and a crowded rookie receiver room could keep the ceiling uneven early.",
+      "sources": [
+        { "publisher": "NFL.com", "title": "Six late-round sleepers to target", "url": "https://www.nfl.com/news/2026-nfl-fantasy-football-six-late-round-sleepers-to-target" },
+        { "publisher": "FantasyPros", "title": "Late-round draft strategy", "url": "https://www.fantasypros.com/2026/08/2026-fantasy-football-late-round-draft-strategy/" }
+      ]
+    },
+    {
+      "player": "Omar Cooper Jr.",
+      "score": 87,
+      "targetRounds": "14-16",
+      "confidence": "Medium",
+      "keeperThesis": "First-round prospect value at a final-round fantasy price creates unusually strong cost leverage if he wins the Jets' long-term slot job.",
+      "redraftPath": "May begin behind a veteran, but one role change could unlock immediate slot targets.",
+      "risk": "The opening-day role is not secure, so he may require patience or a waiver re-add.",
+      "sources": [
+        { "publisher": "NFL.com", "title": "15 rookies worth a late-round pick", "url": "https://www.nfl.com/news/2026-nfl-fantasy-football-15-rookies-worth-a-late-round-draft-pick" },
+        { "publisher": "FantasyPros", "title": "Late-round draft strategy", "url": "https://www.fantasypros.com/2026/08/2026-fantasy-football-late-round-draft-strategy/" }
+      ]
+    },
+    {
+      "player": "De'Zhaun Stribling",
+      "score": 85,
+      "targetRounds": "12-15",
+      "confidence": "Medium",
+      "keeperThesis": "A rising rookie with encouraging camp and preseason usage can become a starting-caliber young receiver while still carrying a late-round keeper price.",
+      "redraftPath": "Early production and positive role reports give him a faster path to relevance than a typical deep rookie stash.",
+      "risk": "The role and health trend must be checked immediately before the draft; preseason momentum can be fragile.",
+      "sources": [
+        { "publisher": "NFL.com", "title": "15 rookies worth a late-round pick", "url": "https://www.nfl.com/news/2026-nfl-fantasy-football-15-rookies-worth-a-late-round-draft-pick" },
+        { "publisher": "FantasyPros", "title": "Late-round draft strategy", "url": "https://www.fantasypros.com/2026/08/2026-fantasy-football-late-round-draft-strategy/" }
+      ]
+    },
+    {
+      "player": "Ja'Kobi Lane",
+      "score": 83,
+      "targetRounds": "15-16",
+      "confidence": "Medium",
+      "keeperThesis": "Third-round NFL capital, size and a possible red-zone role next to Zay Flowers give him a low-cost route to becoming Baltimore's long-term No. 2 receiver.",
+      "redraftPath": "A final-round selection can be held through the first role tests without sacrificing meaningful draft capital.",
+      "risk": "Baltimore can remain run-heavy and veteran competition may delay consistent routes.",
+      "sources": [
+        { "publisher": "NFL.com", "title": "Six late-round sleepers to target", "url": "https://www.nfl.com/news/2026-nfl-fantasy-football-six-late-round-sleepers-to-target" }
+      ]
+    },
+    {
+      "player": "Jalen Coker",
+      "score": 80,
+      "targetRounds": "12-15",
+      "confidence": "Medium",
+      "keeperThesis": "A young receiver with an attainable starting role and evidence of NFL production can turn a cheap pick into a stable future starter if Carolina's passing game develops.",
+      "redraftPath": "He has a clearer immediate route to weekly snaps than many players drafted in the same range.",
+      "risk": "His ceiling depends on target quality and whether Carolina adds or elevates another receiver.",
+      "sources": [
+        { "publisher": "FantasyPros", "title": "Late-round draft strategy", "url": "https://www.fantasypros.com/2026/08/2026-fantasy-football-late-round-draft-strategy/" }
+      ]
+    },
+    {
+      "player": "Terrance Ferguson",
+      "score": 78,
+      "targetRounds": "13-16",
+      "confidence": "Medium",
+      "keeperThesis": "Young tight ends often gain value after their rookie acclimation period; a late price preserves the chance to keep a future every-down receiving tight end before the market reprices him.",
+      "redraftPath": "A developmental bench slot with touchdown and route-growth upside rather than an immediate weekly starter.",
+      "risk": "Tight-end breakouts can take multiple seasons and the 2026 target floor may be low.",
+      "sources": [
+        { "publisher": "FantasyPros", "title": "Late-round draft strategy", "url": "https://www.fantasypros.com/2026/08/2026-fantasy-football-late-round-draft-strategy/" }
+      ]
+    },
+    {
+      "player": "Jonah Coleman",
+      "score": 76,
+      "targetRounds": "13-16",
+      "confidence": "Medium",
+      "keeperThesis": "A cheap rookie running back attached to an unsettled depth chart can gain keeper value quickly with one role change, even if his immediate touch projection is modest.",
+      "redraftPath": "Bench stash and contingency back whose value rises sharply with depth-chart movement.",
+      "risk": "He may remain a limited committee player and running-back role value can disappear quickly.",
+      "sources": [
+        { "publisher": "FantasyPros", "title": "Late-round draft strategy", "url": "https://www.fantasypros.com/2026/08/2026-fantasy-football-late-round-draft-strategy/" }
+      ]
+    },
+    {
+      "player": "Pat Bryant",
+      "score": 72,
+      "targetRounds": "15-16",
+      "confidence": "Low",
+      "keeperThesis": "A near-free young receiver can become a valuable keeper if he claims a durable outside role; the acquisition cost makes the miss inexpensive.",
+      "redraftPath": "Final-round role bet whose early route participation should decide whether to hold or churn the spot.",
+      "risk": "The path to meaningful targets is less proven than the higher-scored candidates.",
+      "sources": [
+        { "publisher": "FantasyPros", "title": "Late-round draft strategy", "url": "https://www.fantasypros.com/2026/08/2026-fantasy-football-late-round-draft-strategy/" }
+      ]
+    },
+    {
+      "player": "Ryan Flournoy",
+      "score": 69,
+      "targetRounds": "16 or FA",
+      "confidence": "Low",
+      "keeperThesis": "The Round 16/free-agent keeper mechanism makes a young receiver with a plausible role spike worth monitoring even when his median outcome is a roster churn.",
+      "redraftPath": "Use the final pick or early waivers only if the route share and depth-chart evidence remain positive.",
+      "risk": "Low draft capital and uncertain target priority create a wide miss rate.",
+      "sources": [
+        { "publisher": "FantasyPros", "title": "Late-round draft strategy", "url": "https://www.fantasypros.com/2026/08/2026-fantasy-football-late-round-draft-strategy/" }
+      ]
+    },
+    {
+      "player": "Jayden Higgins",
+      "score": 77,
+      "targetRounds": "FA / IR stash",
+      "confidence": "Low",
+      "keeperThesis": "If he is undrafted, the NYFL free-agent rule can lock in a Round 16 keeper price for a talented young receiver whose value could rebound after recovery.",
+      "redraftPath": "IR-only stash; do not spend a normal bench spot while he is unavailable.",
+      "risk": "Season-ending injury and uncertain recovery make this a long-horizon option, not a 2026 production bet.",
+      "sources": [
+        { "publisher": "NFL.com", "title": "Fantasy football injury updates", "url": "https://www.nfl.com/injuries/" }
+      ]
+    }
+  ]
+}
